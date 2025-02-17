@@ -6,6 +6,6 @@ const ap = new APlayer({
         name: 'name',
         artist: 'artist',
         url: 'url1.mp3',
-        
+         cover: 'cov.jpg',
     }]
 });
