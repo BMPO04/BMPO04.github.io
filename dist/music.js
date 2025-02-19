@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         container: document.getElementById('aplayer'),
         fixed: true,
         preload: 'auto',
-        autoplay: false, // 禁用自动播放
+        autoplay: true, // 禁用自动播放
         audio: [
             {
             name: '老人与海（管弦）',
