@@ -5,13 +5,12 @@ document.addEventListener('DOMContentLoaded', function () {
         container: document.getElementById('aplayer'),
         fixed: true,
         preload: 'auto',
-        autoplay: true, // 禁用自动播放
+        autoplay: true, 
         audio: [
             {
             name: '老人与海（管弦）',
             artist: '未知艺术家',
-            url: '/music/laor.mp3', // 替换为你的本地音乐文件路径
-            //cover: '/images/cover.jpg', 替换为封面图片路径
+            url: '/music/laor.mp3', 
         },
    {
             name: 'ire_the_foggy_dew',
@@ -29,14 +28,29 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('音乐已播放');
     }
 
-    // 监听用户交互事件（点击页面）
-    document.addEventListener('click', playMusic, { once: true });
-document.addEventListener('scroll', playMusic, { once: true });
+ let hasPlayed = false;
 
-    // 设置定时器：1秒后自动播放
+    // 定义播放音乐的函数
+    function playMusic() {
+        if (hasPlayed) return; // 如果已经播放过，则不再触发
+        ap.play().catch((error) => {
+            console.warn('自动播放失败，需要用户交互', error);
+        });
+        hasPlayed = true; // 标记为已播放
+    }
+
+    // 注册用户交互事件监听器
+    function registerInteractionListeners() {
+        document.addEventListener('mousemove', playMusic, { once: true });
+        document.addEventListener('scroll', playMusic, { once: true });
+        document.addEventListener('click', playMusic, { once: true });
+    }
+
+    // 设置定时器：5秒后自动播放
     setTimeout(() => {
-        if (!ap.audio.paused) return; // 如果已经播放，则不操作
-        playMusic(); // 1秒后自动播放
-        console.log('1秒后自动播放');
-    }, 1000);
+        playMusic(); // 5秒后尝试自动播放
+    }, 5000);
+
+    // 注册用户交互事件监听器
+    registerInteractionListeners();
 });
