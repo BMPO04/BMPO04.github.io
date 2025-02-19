@@ -1,6 +1,7 @@
-const ap = new APlayer({
+window.addEventListener('DOMContentLoaded', function() {const ap = new APlayer({
     container: document.getElementById('aplayer'),
     fixed: true,
+    preload: 'auto',
     autoplay: true,
     audio: [
         {
@@ -17,4 +18,5 @@ const ap = new APlayer({
         }
         // 可以继续添加更多歌曲
     ]
+});
 });
