@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 监听用户交互事件（点击页面）
     document.addEventListener('click', playMusic, { once: true });
+document.addEventListener('scroll', playMusic, { once: true });
 
     // 设置定时器：1秒后自动播放
     setTimeout(() => {
