@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // 初始化 APlayer
-    const ap = new APlayer({
-        container: document.getElementById('aplayer'),
+document.addEventListener('DOMContentLoaded', () => {
+    // 初始化播放器
+    const ap = new APlayer({ 
+       container: document.getElementById('aplayer'),
         fixed: true,
         preload: 'auto',
         autoplay: true, 
@@ -19,46 +19,51 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         ]
-    });
-  // 标志：是否已经播放过音乐
-    let hasPlayed = false;
-
-    // 定义播放音乐的函数
-    function playMusic() {
-        if (hasPlayed) return; // 如果已经播放过，则不再触发
-        ap.play().catch((error) => {
-            console.warn('自动播放失败，需要用户交互', error);
+  });
+    let isInitialized = false;
+    
+    // 预创建播放引导组件
+    const createPlayButton = () => {
+        const btn = document.createElement('button');
+        Object.assign(btn.style, {
+            position: 'fixed',
+            bottom: '20px',
+            right: '20px',
+            zIndex: 1000
         });
-        hasPlayed = true; // 标记为已播放
-        removeInteractionListeners(); // 移除所有交互事件监听器
-    }
+        btn.textContent = '点击播放音乐';
+        return btn;
+    };
 
-    // 注册用户交互事件监听器
-    function registerInteractionListeners() {
-        document.addEventListener('mousemove', playMusic, { once: true });
-        document.addEventListener('scroll', playMusic, { once: true });
-        document.addEventListener('click', playMusic, { once: true });
-    }
+    // 统一播放控制逻辑
+    const attemptPlay = async () => {
+        if (isInitialized) return;
+        isInitialized = true;
+        
+        try {
+            await ap.play();
+        } catch (error) {
+            handlePlayError(error);
+        }
+    };
 
-    // 移除所有交互事件监听器
-    function removeInteractionListeners() {
-        document.removeEventListener('mousemove', playMusic);
-        document.removeEventListener('scroll', playMusic);
-        document.removeEventListener('click', playMusic);
-    }
+    // 错误处理模块化
+    const handlePlayError = (error) => {
+        console.error('播放失败:', error);
+        const playButton = createPlayButton();
+        
+        const clickHandler = () => {
+            ap.play().finally(() => {
+                playButton.remove();
+                playButton.removeEventListener('click', clickHandler);
+            });
+        };
+        
+        playButton.addEventListener('click', clickHandler);
+        document.body.appendChild(playButton);
+    };
 
-    // 设置定时器：5秒后自动播放
-    setTimeout(() => {
-        playMusic(); // 5秒后尝试自动播放
-    }, 5000);
-
-    // 注册用户交互事件监听器
-    registerInteractionListeners();
-
-    // 监听播放器的暂停事件
-    ap.on('pause', () => {
-        console.log('音乐已暂停');
-        // 用户暂停后，不再允许通过交互触发播放
-        hasPlayed = false; // 允许再次播放
-    });
+    // 智能事件绑定
+    const initEvent = ('ontouchstart' in window) ? 'touchstart' : 'click';
+    document.addEventListener(initEvent, attemptPlay, { once: true });
 });
