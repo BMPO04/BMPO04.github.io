@@ -21,14 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         ]
     });
-
-    // 定义播放函数
-    function playMusic() {
-        ap.play(); // 播放音乐
-        console.log('音乐已播放');
-    }
-
- let hasPlayed = false;
+  // 标志：是否已经播放过音乐
+    let hasPlayed = false;
 
     // 定义播放音乐的函数
     function playMusic() {
@@ -37,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
             console.warn('自动播放失败，需要用户交互', error);
         });
         hasPlayed = true; // 标记为已播放
+        removeInteractionListeners(); // 移除所有交互事件监听器
     }
 
     // 注册用户交互事件监听器
@@ -46,6 +41,13 @@ document.addEventListener('DOMContentLoaded', function () {
         document.addEventListener('click', playMusic, { once: true });
     }
 
+    // 移除所有交互事件监听器
+    function removeInteractionListeners() {
+        document.removeEventListener('mousemove', playMusic);
+        document.removeEventListener('scroll', playMusic);
+        document.removeEventListener('click', playMusic);
+    }
+
     // 设置定时器：5秒后自动播放
     setTimeout(() => {
         playMusic(); // 5秒后尝试自动播放
@@ -53,4 +55,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 注册用户交互事件监听器
     registerInteractionListeners();
+
+    // 监听播放器的暂停事件
+    ap.on('pause', () => {
+        console.log('音乐已暂停');
+        // 用户暂停后，不再允许通过交互触发播放
+        hasPlayed = false; // 允许再次播放
+    });
 });
