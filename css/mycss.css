@@ -15,15 +15,15 @@
 #footer:before {
     background-color: rgba(0, 0, 0, 0);
 }
-/* 导航栏剧中 */
+/* 导航栏剧中 
 #nav-right{
     flex:1 1 auto;
     justify-content: flex-end;
     margin-left: auto;
     display: flex;
     flex-wrap:nowrap;
-  }
-/* 导航栏常驻 */
+  }*/
+/* 导航栏常驻 
 .nav-fixed #nav{
     transform: translateY(58px)!important;
     -webkit-transform: translateY(58px)!important;
@@ -37,7 +37,7 @@
     -moz-transition: none!important;
     -ms-transition: none!important;
     -o-transition: none!important;
-}
+}*/
 /*显示标题
 #page-name::before {
 	font-size: 18px;
