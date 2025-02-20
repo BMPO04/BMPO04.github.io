@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     // 初始化 APlayer
     const ap = new APlayer({
