@@ -1,29 +1,83 @@
-/* 背景渐变 */
-#web_bg{
-    /*紫粉渐变*/
-    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-    /*粉白蓝*/
-    /*background-image: linear-gradient(-225deg, #dfbacd 0%, #B8DCFF 48%, #58abf3 100%);*/
-     /*background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);*/
+/* 由于全屏会出bug，所以直接给他隐藏 */
+
+.winbox {
+    border-radius: 12px;
+    overflow: hidden;
 }
-/* 页脚footer */
-#footer {
-    /* 与背景渐变效果一致
-    background-image: linear-gradient(-225deg, #d6badf 0%, #B8DCFF 28%, #58abf3 100%);
-}*/
- background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-#footer:before {
-    background-color: rgba(0, 0, 0, 0);
+
+.wb-full {
+    display: none;
 }
-/* 导航栏剧中 
-#nav-right{
-    flex:1 1 auto;
-    justify-content: flex-end;
-    margin-left: auto;
+
+.wb-min {
+    background-position: center;
+}
+
+[data-theme='dark'] .wb-body,
+[data-theme='dark'] #changeBgBox {
+    background: #333 !important;
+}
+
+.bgbox {
     display: flex;
-    flex-wrap:nowrap;
-  }*/
-/* 导航栏常驻 
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pimgbox,
+.imgbox,
+.box {
+    width: 166px;
+    margin: 10px;
+    background-size: cover
+}
+
+.pimgbox,
+.imgbox {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.pimgbox {
+    height: 240px;
+}
+
+.imgbox {
+    height: 95px;
+}
+
+.box {
+    height: 100px;
+}
+  /* 中 */
+@media screen and (max-width: 768px) {
+    /* 背景 */
+    .pimgbox,
+    .imgbox,
+    .box {
+        height: 73px;
+        width: 135px;
+    }
+    .pimgbox {
+        height: 205px;
+    }
+    /* 2.0新增内容 */    
+    .wb-min {
+        display: none;
+    }
+    #changeBgBox .wb-body::-webkit-scrollbar {
+        display: none;
+    }
+}
+/* 导航居中 */
+#nav-right{
+	flex:1 1 auto;
+	justify-content: flex-end;
+	margin-left: auto;
+	display: flex;
+	flex-wrap:nowrap;
+  }
+/* 导航常驻*/
 .nav-fixed #nav{
     transform: translateY(58px)!important;
     -webkit-transform: translateY(58px)!important;
@@ -37,8 +91,9 @@
     -moz-transition: none!important;
     -ms-transition: none!important;
     -o-transition: none!important;
-}*/
-/*显示标题
+}
+/* 导航显示标题*/
+/*显示标题*/
 #page-name::before {
 	font-size: 18px;
 	position: absolute;
@@ -91,4 +146,4 @@
 
 #nav {
 	padding: 0 20px;
-}*/
+}
