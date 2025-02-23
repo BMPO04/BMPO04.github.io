@@ -40,6 +40,7 @@ function changeBg(s, flag) {
 
 // 以下为2.0新增内容
 
+  // 切换背景,flag为1不弹窗
 // 创建窗口
 var winbox = ''
 
@@ -94,18 +95,18 @@ function createWinbox() {
     <details class="toggle"><summary class="toggle-button" style="">查看电脑壁纸</summary>
         <div class="toggle-content">
             <div class="bgbox">
-                <a href="javascript:;" style="background-image:url(https://cdn.leonus.cn/other/dd4aee16880411ebb6edd017c2d2eca2.webp)" class="imgbox" onclick="leonus.changeBg('url(https\://cdn.leonus.cn/other/dd4aee16880411ebb6edd017c2d2eca2.webp)')"></a>
-                <a href="javascript:;" style="background-image:url(https://cdn.leonus.cn/other/66a0f1473a0f4ae7850ac8607774eb03.webp)" class="imgbox" onclick="leonus.changeBg('url(https\://cdn.leonus.cn/other/66a0f1473a0f4ae7850ac8607774eb03.webp)')"></a>
-                <a href="javascript:;" style="background-image:url(https://cdn.leonus.cn/other/058fe486bd784f28875a7a01f68d09de.webp)" class="imgbox" onclick="leonus.changeBg('url(https\://cdn.leonus.cn/other/058fe486bd784f28875a7a01f68d09de.webp)')"></a>
-                <a href="javascript:;" style="background-image:url(https://cdn.leonus.cn/other/c9d3deb2880411ebb6edd017c2d2eca2.webp)" class="imgbox" onclick="leonus.changeBg('url(https\://cdn.leonus.cn/other/c9d3deb2880411ebb6edd017c2d2eca2.webp)')"></a>
-                <a href="javascript:;" style="background-image:url(https://cdn.leonus.cn/other/0d73ff1af5c149c2af78a4c7280c9ac9.webp)" class="imgbox" onclick="leonus.changeBg('url(https\://cdn.leonus.cn/other/0d73ff1af5c149c2af78a4c7280c9ac9.webp)')"></a>
-                <a href="javascript:;" style="background-image:url(https://cdn.leonus.cn/other/08206a3879f9467f93eb18e279dd2642.webp)" class="imgbox" onclick="leonus.changeBg('url(https\://cdn.leonus.cn/other/08206a3879f9467f93eb18e279dd2642.webp)')"></a>
-                <a href="javascript:;" style="background-image:url(https://cdn.leonus.cn/other/14d9904fe2ac4961b203c3eb2f2f467f.webp)" class="imgbox" onclick="leonus.changeBg('url(https\://cdn.leonus.cn/other/14d9904fe2ac4961b203c3eb2f2f467f.webp)')"></a>
-                <a href="javascript:;" style="background-image:url(https://cdn.leonus.cn/other/f048e9726518419fa15dd365902500c4.webp)" class="imgbox" onclick="leonus.changeBg('url(https\://cdn.leonus.cn/other/f048e9726518419fa15dd365902500c4.webp)')"></a>
-                <a href="javascript:;" style="background-image:url(https://cdn.leonus.cn/other/bab9141327ca48e39abef6229b79cf9c.webp)" class="imgbox" onclick="leonus.changeBg('url(https\://cdn.leonus.cn/other/bab9141327ca48e39abef6229b79cf9c.webp)')"></a>
-                <a href="javascript:;" style="background-image:url(https://cdn.leonus.cn/other/a26f66658e014e06aa70e2753742bef3.webp)" class="imgbox" onclick="leonus.changeBg('url(https\://cdn.leonus.cn/other/a26f66658e014e06aa70e2753742bef3.webp)')"></a>
-                <a href="javascript:;" style="background-image:url(https://cdn.leonus.cn/other/35d9316f450041b89232893f083a57f1.webp)" class="imgbox" onclick="leonus.changeBg('url(https\://cdn.leonus.cn/other/35d9316f450041b89232893f083a57f1.webp)')"></a>
-                <a href="javascript:;" style="background-image:url(https://cdn.leonus.cn/other/6143778327db4d17adbb63c0f6c0a8af.webp)" class="imgbox" onclick="leonus.changeBg('url(https\://cdn.leonus.cn/other/6143778327db4d17adbb63c0f6c0a8af.webp)')"></a>
+                <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://cdn.leonus.cn/other/35d9316f450041b89232893f083a57f1.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/35d9316f450041b89232893f083a57f1.webp)')"></a>
+                <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://cdn.leonus.cn/other/dd4aee16880411ebb6edd017c2d2eca2.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/dd4aee16880411ebb6edd017c2d2eca2.webp)')"></a>
+                <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://cdn.leonus.cn/other/66a0f1473a0f4ae7850ac8607774eb03.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/66a0f1473a0f4ae7850ac8607774eb03.webp)')"></a>
+                <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://cdn.leonus.cn/other/058fe486bd784f28875a7a01f68d09de.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/058fe486bd784f28875a7a01f68d09de.webp)')"></a>
+                <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://cdn.leonus.cn/other/c9d3deb2880411ebb6edd017c2d2eca2.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/c9d3deb2880411ebb6edd017c2d2eca2.webp)')"></a>
+                <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://cdn.leonus.cn/other/0d73ff1af5c149c2af78a4c7280c9ac9.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/0d73ff1af5c149c2af78a4c7280c9ac9.webp)')"></a>
+                <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://cdn.leonus.cn/other/08206a3879f9467f93eb18e279dd2642.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/08206a3879f9467f93eb18e279dd2642.webp)')"></a>
+                <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://cdn.leonus.cn/other/14d9904fe2ac4961b203c3eb2f2f467f.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/14d9904fe2ac4961b203c3eb2f2f467f.webp)')"></a>
+                <a href="javascript:;" style="background-image:url(https://cdn.leonus.cn/other/f048e9726518419fa15dd365902500c4.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/f048e9726518419fa15dd365902500c4.webp)')"></a>
+                <a href="javascript:;" style="background-image:url(https://cdn.leonus.cn/other/bab9141327ca48e39abef6229b79cf9c.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/bab9141327ca48e39abef6229b79cf9c.webp)')"></a>
+                <a href="javascript:;" style="background-image:url(https://cdn.leonus.cn/other/a26f66658e014e06aa70e2753742bef3.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/a26f66658e014e06aa70e2753742bef3.webp)')"></a>
+                <a href="javascript:;" style="background-image:url(https://cdn.leonus.cn/other/6143778327db4d17adbb63c0f6c0a8af.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/6143778327db4d17adbb63c0f6c0a8af.webp)')"></a>
             </div>
         </div>
     </details>
@@ -114,12 +115,11 @@ function createWinbox() {
     <details class="toggle"><summary class="toggle-button" style="">查看渐变背景</summary>
         <div class="toggle-content">
             <div class="bgbox">
-            <a href="javascript:;" class="box" style="background: linear-gradient(to right, #eecda3, #ef629f)" onclick="leonus.changeBg('linear-gradient(to right, #eecda3, #ef629f)')"></a>
-            <a href="javascript:;" class="box" style="background: linear-gradient(to right, rgb(255, 110, 127), rgb(191, 233, 255))" onclick="leonus.changeBg('linear-gradient(to right, #eecda3, #ef629f)')"></a>
-            <a href="javascript:;" class="box" style="background: linear-gradient(to right, #ff4b1f, #1fddff)" onclick="leonus.changeBg('linear-gradient(to right, #ff4b1f, #1fddff)')"></a>
-            <a href="javascript:;" class="box" style="background: linear-gradient(to right, rgb(251, 215, 134), rgb(247, 121, 125))" onclick="leonus.changeBg('linear-gradient(to right, rgb(251, 215, 134), rgb(247, 121, 125))')"></a>
-            <a href="javascript:;" class="box" style="background: linear-gradient(to right, #16bffd, #cb3066)" onclick="leonus.changeBg('linear-gradient(to right, #16bffd, #cb3066)')"></a>
-            <a href="javascript:;" class="box" style="background: linear-gradient(to right, rgb(192, 192, 170), rgb(28, 239, 255))" onclick="leonus.changeBg('linear-gradient(to right, rgb(192, 192, 170), rgb(28, 239, 255))')"></a>
+            <a href="javascript:;" class="box" style="background: linear-gradient(to right, #eecda3, #ef629f)" onclick="changeBg('linear-gradient(to right, #eecda3, #ef629f)')"></a>
+            <a href="javascript:;" class="box" style="background: linear-gradient(to right, #ff4b1f, #1fddff)" onclick="changeBg('linear-gradient(to right, #ff4b1f, #1fddff)')"></a>
+            <a href="javascript:;" class="box" style="background: linear-gradient(to right, rgb(251, 215, 134), rgb(247, 121, 125))" onclick="changeBg('linear-gradient(to right, rgb(251, 215, 134), rgb(247, 121, 125))')"></a>
+            <a href="javascript:;" class="box" style="background: linear-gradient(to right, #16bffd, #cb3066)" onclick="changeBg('linear-gradient(to right, #16bffd, #cb3066)')"></a>
+            <a href="javascript:;" class="box" style="background: linear-gradient(to right, rgb(192, 192, 170), rgb(28, 239, 255))" onclick="changeBg('linear-gradient(to right, rgb(192, 192, 170), rgb(28, 239, 255))')"></a>
             </div>
         </div>
     </details>
@@ -128,12 +128,12 @@ function createWinbox() {
     <details class="toggle"><summary class="toggle-button" style="">查看纯色背景</summary>
         <div class="toggle-content">
             <div class="bgbox">
-            <a href="javascript:;" class="box" style="background: #F4E2D8" onclick="leonus.changeBg('#F4E2D8')"></a>
-            <a href="javascript:;" class="box" style="background: #7D9D9C" onclick="leonus.changeBg('#7D9D9C')"></a>
-            <a href="javascript:;" class="box" style="background: #F2D7D9" onclick="leonus.changeBg('#F2D7D9')"></a>
-            <a href="javascript:;" class="box" style="background: #76BA99" onclick="leonus.changeBg('#76BA99')"></a>
-            <a href="javascript:;" class="box" style="background: #9FC088" onclick="leonus.changeBg('#9FC088')"></a>
-            <a href="javascript:;" class="box" style="background: #CEAB93" onclick="leonus.changeBg('#CEAB93')"></a>
+            <a href="javascript:;" class="box" style="background: #F4E2D8" onclick="changeBg('#F4E2D8')"></a>
+            <a href="javascript:;" class="box" style="background: #7D9D9C" onclick="changeBg('#7D9D9C')"></a>
+            <a href="javascript:;" class="box" style="background: #F2D7D9" onclick="changeBg('#F2D7D9')"></a>
+            <a href="javascript:;" class="box" style="background: #76BA99" onclick="changeBg('#76BA99')"></a>
+            <a href="javascript:;" class="box" style="background: #9FC088" onclick="changeBg('#9FC088')"></a>
+            <a href="javascript:;" class="box" style="background: #CEAB93" onclick="changeBg('#CEAB93')"></a>
             </div>
         </div>
     </details>
