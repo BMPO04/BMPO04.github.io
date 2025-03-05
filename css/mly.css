@@ -5,10 +5,10 @@
   }
 /* 背景渐变 */
 #web_bg{
-     background-image: url("../img/bg.webp"),
-                     linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35))
+     background-image: url("../img/bg.webp")
+                    
 }
-/* 页脚footer */
+/* 页脚footer  linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35))*/
 #footer {
     /* 与背景渐变效果一致
     background-image: linear-gradient(-225deg, #d6badf 0%, #B8DCFF 28%, #58abf3 100%);
