@@ -1,3 +1,6 @@
+// 创建 leonus 对象并将函数挂载上去
+var leonus = leonus || {};
+leonus.changeBg = changeBg;
 
 // 存数据
 // name：命名 data：数据
@@ -95,18 +98,8 @@ function createWinbox() {
     <details class="toggle"><summary class="toggle-button" style="">查看电脑壁纸</summary>
         <div class="toggle-content">
             <div class="bgbox">
-                <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://cdn.leonus.cn/other/35d9316f450041b89232893f083a57f1.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/35d9316f450041b89232893f083a57f1.webp)')"></a>
-                <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://cdn.leonus.cn/other/dd4aee16880411ebb6edd017c2d2eca2.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/dd4aee16880411ebb6edd017c2d2eca2.webp)')"></a>
-                <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://cdn.leonus.cn/other/66a0f1473a0f4ae7850ac8607774eb03.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/66a0f1473a0f4ae7850ac8607774eb03.webp)')"></a>
-                <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://cdn.leonus.cn/other/058fe486bd784f28875a7a01f68d09de.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/058fe486bd784f28875a7a01f68d09de.webp)')"></a>
-                <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://cdn.leonus.cn/other/c9d3deb2880411ebb6edd017c2d2eca2.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/c9d3deb2880411ebb6edd017c2d2eca2.webp)')"></a>
-                <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://cdn.leonus.cn/other/0d73ff1af5c149c2af78a4c7280c9ac9.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/0d73ff1af5c149c2af78a4c7280c9ac9.webp)')"></a>
-                <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://cdn.leonus.cn/other/08206a3879f9467f93eb18e279dd2642.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/08206a3879f9467f93eb18e279dd2642.webp)')"></a>
-                <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://cdn.leonus.cn/other/14d9904fe2ac4961b203c3eb2f2f467f.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/14d9904fe2ac4961b203c3eb2f2f467f.webp)')"></a>
-                <a href="javascript:;" style="background-image:url(https://cdn.leonus.cn/other/f048e9726518419fa15dd365902500c4.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/f048e9726518419fa15dd365902500c4.webp)')"></a>
-                <a href="javascript:;" style="background-image:url(https://cdn.leonus.cn/other/bab9141327ca48e39abef6229b79cf9c.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/bab9141327ca48e39abef6229b79cf9c.webp)')"></a>
-                <a href="javascript:;" style="background-image:url(https://cdn.leonus.cn/other/a26f66658e014e06aa70e2753742bef3.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/a26f66658e014e06aa70e2753742bef3.webp)')"></a>
-                <a href="javascript:;" style="background-image:url(https://cdn.leonus.cn/other/6143778327db4d17adbb63c0f6c0a8af.webp)" class="imgbox" onclick="changeBg('url(https\://cdn.leonus.cn/other/6143778327db4d17adbb63c0f6c0a8af.webp)')"></a>
+              <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://cn.bing.com/th?id=OHR.GBRTurtle_ZH-CN6069093254_1920x1080.jpg)" class="imgbox" onclick="changeBg('url(https\://cn.bing.com/th?id=OHR.GBRTurtle_ZH-CN6069093254_1920x1080.jpg)')"></a>
+              <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(img/a26f66658e014e06aa70e2753742bef3.webp)" class="imgbox" onclick="changeBg('url(img/a26f66658e014e06aa70e2753742bef3.webp)')"> </a>
             </div>
         </div>
     </details>
